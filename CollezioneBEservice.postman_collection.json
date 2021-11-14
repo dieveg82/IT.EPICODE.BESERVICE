@@ -1,0 +1,1245 @@
+{
+	"info": {
+		"_postman_id": "e54c6a83-5f56-4b21-bc23-cdc2cf688f4c",
+		"name": "CollezioneBEservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SelectAll",
+			"item": [
+				{
+					"name": "SelectAllClienteOrderRagioneSociale",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllercliente/findallorderagsociale",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercliente",
+								"findallorderagsociale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectAllClienteOrderFatturatoAnnuale",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllercliente/findallorderfattannuale",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercliente",
+								"findallorderfattannuale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectAllClienteOrderDataInserimento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllercliente/findallorderdatainser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercliente",
+								"findallorderdatainser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectAllClienteOrderDataUltimoContatto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllercliente/findallorderdataultcon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercliente",
+								"findallorderdataultcon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectAllComunePage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllercomune/findcomunepage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercomune",
+								"findcomunepage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectAllProvinciaPage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllerprovincia/findallpage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerprovincia",
+								"findallpage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SelectBy",
+			"item": [
+				{
+					"name": "SelectClienteByPartitaIva",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllercliente/findbypartitaiva?partitaIva=12345678901",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercliente",
+								"findbypartitaiva"
+							],
+							"query": [
+								{
+									"key": "partitaIva",
+									"value": "12345678901"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectClienteByFatturatoAnnuo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllercliente/findbyfatturatoannuale?fatturatoAnnuale=500000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercliente",
+								"findbyfatturatoannuale"
+							],
+							"query": [
+								{
+									"key": "fatturatoAnnuale",
+									"value": "500000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectClienteByDataInserimento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllercliente/findbydatainserimento?dataInserimento=2021-01-15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercliente",
+								"findbydatainserimento"
+							],
+							"query": [
+								{
+									"key": "dataInserimento",
+									"value": "2021-01-15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectClienteByDataUltimoContatto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllercliente/findbydataultimocontatto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercliente",
+								"findbydataultimocontatto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectComuneByNomeComune",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllercomune/findComuneByNome?nomeComune=Airasca",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercomune",
+								"findComuneByNome"
+							],
+							"query": [
+								{
+									"key": "nomeComune",
+									"value": "Airasca"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectFatturaByStato",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllerfattura/findbystato?stato=Da pagare",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerfattura",
+								"findbystato"
+							],
+							"query": [
+								{
+									"key": "stato",
+									"value": "Da pagare"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectFatturaByNumeroFattura",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllerfattura/findbynumerofattura?numeroFattura=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerfattura",
+								"findbynumerofattura"
+							],
+							"query": [
+								{
+									"key": "numeroFattura",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectFatturaByRagioneSocialeCliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllerfattura/findbycliente?ragioneSociale=Romana Market",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerfattura",
+								"findbycliente"
+							],
+							"query": [
+								{
+									"key": "ragioneSociale",
+									"value": "Romana Market"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectFatturaByDataFattura",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllerfattura/findbydata?data=2021-08-20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerfattura",
+								"findbydata"
+							],
+							"query": [
+								{
+									"key": "data",
+									"value": "2021-08-20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectFatturaByAnnoFattura",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllerfattura/findbyanno?anno=2021",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerfattura",
+								"findbyanno"
+							],
+							"query": [
+								{
+									"key": "anno",
+									"value": "2021"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectIndirizzoByViaByCivicoByCap",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllerindirizzo/findbyviabycivicobycap?via=via toscana&civico=50&cap=09025",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerindirizzo",
+								"findbyviabycivicobycap"
+							],
+							"query": [
+								{
+									"key": "via",
+									"value": "via toscana"
+								},
+								{
+									"key": "civico",
+									"value": "50"
+								},
+								{
+									"key": "cap",
+									"value": "09025"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectProvinciaByNomeProvincia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllerprovincia/findprovinciabynome?nomeProvincia=Torino",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerprovincia",
+								"findprovinciabynome"
+							],
+							"query": [
+								{
+									"key": "nomeProvincia",
+									"value": "Torino"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Insert",
+			"item": [
+				{
+					"name": "InsertComune",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"nome\":\"provacomune\",\r\n            \"provincia\" :{\r\n                \"id\":\"97\",\r\n                \"nome\" :\"Torino\",\r\n                \"Sigla\" : \"TO\"\r\n            }\r\n        \r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllercomune/insertcomunepost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercomune",
+								"insertcomunepost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertFattura",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllerfattura/insertfattura?data=2021-11-09&numeroFattura=2&anno=2021&importo=1000&statoFattura=Da pagare&partitaIva=12345678901",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerfattura",
+								"insertfattura"
+							],
+							"query": [
+								{
+									"key": "data",
+									"value": "2021-11-09"
+								},
+								{
+									"key": "numeroFattura",
+									"value": "2"
+								},
+								{
+									"key": "anno",
+									"value": "2021"
+								},
+								{
+									"key": "importo",
+									"value": "1000"
+								},
+								{
+									"key": "statoFattura",
+									"value": "Da pagare"
+								},
+								{
+									"key": "partitaIva",
+									"value": "12345678901"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertIndirizzo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllerindirizzo/insert?via=via piano&civico=3&cap=09000&località=null&comune=Cagliari",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerindirizzo",
+								"insert"
+							],
+							"query": [
+								{
+									"key": "via",
+									"value": "via piano"
+								},
+								{
+									"key": "civico",
+									"value": "3"
+								},
+								{
+									"key": "cap",
+									"value": "09000"
+								},
+								{
+									"key": "località",
+									"value": "null"
+								},
+								{
+									"key": "comune",
+									"value": "Cagliari"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertProvincia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllerprovincia/insertprovincia?nomeProvincia=Prova&siglaProvincia=P2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerprovincia",
+								"insertprovincia"
+							],
+							"query": [
+								{
+									"key": "nomeProvincia",
+									"value": "Prova"
+								},
+								{
+									"key": "siglaProvincia",
+									"value": "P2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ragioneSociale\" : \"prova\",\r\n    \"partitaIva\": \"12345678922\",\r\n    \"tipoCliente\" : \"SRL\",\r\n    \"nomeContatto\" : \"diego\",\r\n    \"cognomeContatto\" : \"cappai\",\r\n    \"telefonoContatto\" : \"070940740\",\r\n    \"emailContatto\" : \"diego.cappai@prova.it\",\r\n    \"indirizzoSedeOperativo\" :    \r\n     {\r\n         \"id\":\"1\",\r\n        \"via\" : \"via toscana\",\r\n        \"civico\" : \"50\" ,\r\n        \"cap\" : \"09025\",\r\n        \"comune\" : {\r\n            \"id\":\"7694\",\r\n            \"nome\":\"Assemini\",\r\n            \"provincia\" :{\r\n                \"id\":\"20\",\r\n                \"nome\" :\"Cagliari\",\r\n                \"Sigla\" : \"CA\"\r\n            }\r\n        }\r\n    },\r\n    \"indirizzoSedeLegale\":{\r\n         \"id\":\"1\",\r\n        \"via\" : \"via toscana\",\r\n        \"civico\" : \"50\" ,\r\n        \"cap\" : \"09025\",\r\n        \"comune\" : {\r\n            \"id\":\"7694\",\r\n            \"nome\":\"Assemini\",\r\n            \"provincia\" :{\r\n                \"id\":\"20\",\r\n                \"nome\" :\"Cagliari\",\r\n                \"Sigla\" : \"CA\"\r\n            }\r\n        }\r\n    },\r\n    \"dataInserimento\": \"2021-11-01\",\r\n    \"dataUltimoContatto\" : \"2021-12-01\",\r\n    \"fatturatoAnnuale\" : \"100000\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllercliente/insertclientepost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercliente",
+								"insertclientepost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertFattura",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"data\" : \"2021-11-10\",\r\n    \"numeroFattura\": \"2\",\r\n    \"anno\": \"2021\",\r\n    \"importo\":\"1000\",\r\n    \"stato\":{\r\n        \"id\":\"1\",\r\n        \"nome\":\"Da pagare\"\r\n        },\r\n        \"cliente\":{\r\n        \"id\":\"2\",\r\n        \"ragioneSociale\" : \"prova\",\r\n        \"partitaIva\": \"12345678922\",\r\n        \"tipoCliente\" : \"SRL\",\r\n        \"nomeContatto\" : \"diego\",\r\n        \"cognomeContatto\" : \"cappai\",\r\n        \"telefonoContatto\" : \"070940740\",\r\n        \"emailContatto\" : \"diego.cappai@prova.it\",\r\n        \"indirizzoSedeOperativo\" :    \r\n        {\r\n            \"id\":\"1\",\r\n            \"via\" : \"via toscana\",\r\n            \"civico\" : \"50\" ,\r\n            \"cap\" : \"09025\",\r\n            \"comune\" : {\r\n                \"id\":\"7694\",\r\n                \"nome\":\"Assemini\",\r\n                \"provincia\" :{\r\n                    \"id\":\"20\",\r\n                    \"nome\" :\"Cagliari\",\r\n                    \"Sigla\" : \"CA\"\r\n                }\r\n            }\r\n        },\r\n        \"indirizzoSedeLegale\":{\r\n            \"id\":\"1\",\r\n            \"via\" : \"via toscana\",\r\n            \"civico\" : \"50\" ,\r\n            \"cap\" : \"09025\",\r\n            \"comune\" : {\r\n                \"id\":\"7694\",\r\n                \"nome\":\"Assemini\",\r\n                \"provincia\" :{\r\n                    \"id\":\"20\",\r\n                    \"nome\" :\"Cagliari\",\r\n                    \"Sigla\" : \"CA\"\r\n                }\r\n            }\r\n        },\r\n        \"dataInserimento\": \"2021-11-01\",\r\n        \"dataUltimoContatto\" : \"2021-12-01\",\r\n        \"fatturatoAnnuale\" : \"100000\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllerfattura/insertfatturapost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerfattura",
+								"insertfatturapost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertIndirizzo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "     {\r\n        \"via\" : \"via toscana\",\r\n        \"civico\" : \"60\" ,\r\n        \"cap\" : \"09025\",\r\n        \"comune\" : {\r\n            \"id\":\"7694\",\r\n            \"nome\":\"Assemini\",\r\n            \"provincia\" :{\r\n                \"id\":\"20\",\r\n                \"nome\" :\"Cagliari\",\r\n                \"Sigla\" : \"CA\"\r\n            }\r\n        }\r\n     }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllerindirizzo/insertpost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerindirizzo",
+								"insertpost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertProvincia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n            \"nome\":\"Prova\",\r\n            \"sigla\" : \"B3\"\r\n\r\n}\r\n   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllerprovincia/insertprovinciapost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerprovincia",
+								"insertprovinciapost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertStatoFattura",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nome\":\"pagato\"\r\n}\r\n   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllerstatofattura/insertstatopost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerstatofattura",
+								"insertstatopost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertComune",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllercomune/insertcomune?nomeComune=prov3&nomeProvincia=Cagliari",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercomune",
+								"insertcomune"
+							],
+							"query": [
+								{
+									"key": "nomeComune",
+									"value": "prov3"
+								},
+								{
+									"key": "nomeProvincia",
+									"value": "Cagliari"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Update",
+			"item": [
+				{
+					"name": "updateCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"2\",\r\n    \"ragioneSociale\" : \"prova2222222\",\r\n    \"partitaIva\": \"12345678922\",\r\n    \"tipoCliente\" : \"SRL\",\r\n    \"nomeContatto\" : \"diego\",\r\n    \"cognomeContatto\" : \"cappai\",\r\n    \"telefonoContatto\" : \"070940740\",\r\n    \"emailContatto\" : \"diego.cappai@prova.it\",\r\n    \"indirizzoSedeOperativo\" :    \r\n     {\r\n         \"id\":\"1\",\r\n        \"via\" : \"via toscana\",\r\n        \"civico\" : \"50\" ,\r\n        \"cap\" : \"09025\",\r\n        \"comune\" : {\r\n            \"id\":\"7694\",\r\n            \"nome\":\"Assemini\",\r\n            \"provincia\" :{\r\n                \"id\":\"20\",\r\n                \"nome\" :\"Cagliari\",\r\n                \"Sigla\" : \"CA\"\r\n            }\r\n        }\r\n    },\r\n    \"indirizzoSedeLegale\":{\r\n         \"id\":\"1\",\r\n        \"via\" : \"via toscana\",\r\n        \"civico\" : \"50\" ,\r\n        \"cap\" : \"09025\",\r\n        \"comune\" : {\r\n            \"id\":\"7694\",\r\n            \"nome\":\"Assemini\",\r\n            \"provincia\" :{\r\n                \"id\":\"20\",\r\n                \"nome\" :\"Cagliari\",\r\n                \"Sigla\" : \"CA\"\r\n            }\r\n        }\r\n    },\r\n    \"dataInserimento\": \"2021-11-01\",\r\n    \"dataUltimoContatto\" : \"2021-12-01\",\r\n    \"fatturatoAnnuale\" : \"100000\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllercliente/updatecliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercliente",
+								"updatecliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProvincia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"id\":\"  111\",\r\n            \"nome\":\"Prova update\",\r\n            \"sigla\" : \"B3\"\r\n\r\n}\r\n   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllerprovincia/updateprovinciapost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerprovincia",
+								"updateprovinciapost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStato",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"2\",\r\n   \"nome\":\"pagato update\"\r\n}\r\n   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllerstatofattura/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerstatofattura",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"1\",\r\n    \"ragioneSociale\" : \"prova\",\r\n    \"partitaIva\": \"12345678922\",\r\n    \"tipoCliente\" : \"SRL\",\r\n    \"nomeContatto\" : \"diego\",\r\n    \"cognomeContatto\" : \"cappai\",\r\n    \"telefonoContatto\" : \"070940740\",\r\n    \"emailContatto\" : \"diego.cappai@prova.it\",\r\n    \"indirizzoSedeOperativo\" :    \r\n     {\r\n         \"id\":\"1\",\r\n        \"via\" : \"via toscana\",\r\n        \"civico\" : \"50\" ,\r\n        \"cap\" : \"09025\",\r\n        \"comune\" : {\r\n            \"id\":\"7694\",\r\n            \"nome\":\"Assemini\",\r\n            \"provincia\" :{\r\n                \"id\":\"20\",\r\n                \"nome\" :\"Cagliari\",\r\n                \"Sigla\" : \"CA\"\r\n            }\r\n        }\r\n    },\r\n    \"indirizzoSedeLegale\":{\r\n         \"id\":\"1\",\r\n        \"via\" : \"via toscana\",\r\n        \"civico\" : \"50\" ,\r\n        \"cap\" : \"09025\",\r\n        \"comune\" : {\r\n            \"id\":\"7694\",\r\n            \"nome\":\"Assemini\",\r\n            \"provincia\" :{\r\n                \"id\":\"20\",\r\n                \"nome\" :\"Cagliari\",\r\n                \"Sigla\" : \"CA\"\r\n            }\r\n        }\r\n    },\r\n    \"dataInserimento\": \"2021-11-01\",\r\n    \"dataUltimoContatto\" : \"2021-12-01\",\r\n    \"fatturatoAnnuale\" : \"100000\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllercliente/updatecliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercliente",
+								"updatecliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateComune",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"id\":\"7899\",\r\n            \"nome\":\"provacomune2\",\r\n            \"provincia\" :{\r\n                \"id\":\"97\",\r\n                \"nome\" :\"Torino\",\r\n                \"Sigla\" : \"TO\"\r\n            }\r\n        \r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllercomune/updatecomunepost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercomune",
+								"updatecomunepost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateIndirizzo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "     {\r\n         \"id\":\"3\",\r\n        \"via\" : \"via nuova\",\r\n        \"civico\" : \"50\" ,\r\n        \"cap\" : \"09025\",\r\n        \"comune\" : {\r\n            \"id\":\"7694\",\r\n            \"nome\":\"Assemini\",\r\n            \"provincia\" :{\r\n                \"id\":\"20\",\r\n                \"nome\" :\"Cagliari\",\r\n                \"Sigla\" : \"CA\"\r\n            }\r\n        }\r\n     }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllerindirizzo/updatepost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerindirizzo",
+								"updatepost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateComuneGet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllercomune/updatecomune?nomeComuneOld=prov3&nomeComuneNew=prova4&nomeProvincia=Cagliari",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercomune",
+								"updatecomune"
+							],
+							"query": [
+								{
+									"key": "nomeComuneOld",
+									"value": "prov3"
+								},
+								{
+									"key": "nomeComuneNew",
+									"value": "prova4"
+								},
+								{
+									"key": "nomeProvincia",
+									"value": "Cagliari"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Remove",
+			"item": [
+				{
+					"name": "RemoveComune",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{           \"id\" : \"7905\",\r\n            \"nome\":\"provacomune\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllercomune/removecomune",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercomune",
+								"removecomune"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveIndirizzo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllerindirizzo/removepost?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerindirizzo",
+								"removepost"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveCliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/controllercliente/removecliente?partitaIva=12345678901",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllercliente",
+								"removecliente"
+							],
+							"query": [
+								{
+									"key": "partitaIva",
+									"value": "12345678901"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveFattura",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"id\":\"3\",\r\n    \"data\" : \"2021-11-10\",\r\n    \"numeroFattura\": \"2\",\r\n    \"anno\": \"2021\",\r\n    \"importo\":\"1000\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllerfattura/removefattura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerfattura",
+								"removefattura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveProvincia",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllerprovincia/removeprovincia?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerprovincia",
+								"removeprovincia"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveStatoFattura",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{           \"id\" : \"1\",\r\n            \"nome\":\"Da pagare\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/controllerstatofattura/remove",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"controllerstatofattura",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login/SignUP",
+			"item": [
+				{
+					"name": "LogIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"username\":\"diego\",\r\n        \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"username\":\"diego\",\r\n    \"nome\":\"diego\",\r\n    \"cognome\":\"cappai\",\r\n    \"email\":\"diego.cappai@tiscali.it\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

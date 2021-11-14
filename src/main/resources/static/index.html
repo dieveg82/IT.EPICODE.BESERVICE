@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		
+		<title> Index BeService </title>
+		<link rel = "stylesheet" href = css/style.css />
+		<link rel = "stylesheet" href ="css/style.css"  > </link>
+		<style>
+		
+		@font-face
+		{font-family: 'diego';
+		src: url('Inkfree.ttf') format('truetype');;
+		}
+		/*src: local('diego'), url('Inkfree.ttf') format('truetype');  */
+				
+		h1 { font-family : 'diego';}
+		</style>
+	</head>
+	
+	<body>
+		<h1>
+			Benvenuti nella pagina di BeSErvice <br>
+				
+			
+		</h1>
+		<h1>
+			<p>
+			Gestionale BeService<b>  <br>
+			<img src ="BeService.jpg " alt = "immagine non disponibile"/>
+
+			</h1>
+		<h2> 
+			<form method = "post" action="/indexcontroller/loginform" >          
+                <fieldset>
+                    <legend>Login User </legend>
+                <label for="username">username</label>
+            <input name="username" th:field="*{username}">
+            
+     
+            <label for="password">password</label>
+            <input name="password" th:field="*{password}">
+ 
+                </fieldset>
+                        
+                <button name = "invia" type = "submit" >Invia</button>
+                <button name = "annulla" type = "button" >Annulla </button>
+                
+            </form>
+            
+            <br>
+            <br>
+            <br>
+			
+			<form method = "post" action="/indexcontroller/signupform" >
+        
+                
+                <fieldset>
+            <legend>Signup User </legend>
+             <label for="username">username</label>
+            <input name="username" >
+            
+     
+            <label for="password">password</label>
+            <input name="password" >
+ 
+ 			 <label for="nome">nome</label>
+            <input name="nome" >
+ 
+ 			 <label for="cognome">cognome</label>
+            <input name="cognome" >
+            
+             <label for="email">email</label>
+            <input name="email">
+                </fieldset>
+                        
+                <button name = "invia" type = "submit" >Invia</button>
+                <button name = "annulla" type = "button" >Annulla </button>
+                
+            </form>
+            
+            
+			
+		</h2>
+	
+		
+	</body>
+	
+</html>
+ 
