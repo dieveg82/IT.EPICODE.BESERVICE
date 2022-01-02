@@ -3,18 +3,7 @@
 	<head>
 		
 		<title> Index BeService </title>
-		<link rel = "stylesheet" href = css/style.css />
-		<link rel = "stylesheet" href ="css/style.css"  > </link>
-		<style>
-		
-		@font-face
-		{font-family: 'diego';
-		src: url('Inkfree.ttf') format('truetype');;
-		}
-		/*src: local('diego'), url('Inkfree.ttf') format('truetype');  */
-				
-		h1 { font-family : 'diego';}
-		</style>
+
 	</head>
 	
 	<body>
@@ -81,7 +70,18 @@
             
 			
 		</h2>
+		<button id="clicca"> clicca </button>
+		
+			<script type="text/javascript">
 	
+			document.getElementById("clicca").onclick = cambiaPagina;
+
+			function cambiaPagina (){
+            location.assign ("programmaJava.html");
+        }
+						
+			</script>
+				
 		
 	</body>
 	

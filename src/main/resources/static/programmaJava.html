@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload = "prova()">
+
+    <h1> Questa è la pagina dei comuni del programma Java</h1>
+    <table>
+        <td id ="colonnaComune"> Comune
+            
+        </td>
+        <td id="colonnaProvincia"> Provincia
+            
+        </td>
+    </table>  
+
+    <script>
+
+function prova (){
+				let connettore = new XMLHttpRequest ();
+          connettore.open("GET","http://localhost:8080/controllercomune/findcomunepage",true);
+          connettore.send ();
+
+          connettore.onreadystatechange = function (){
+          if (connettore.readyState ===4 && connettore.status === 200){
+              let oggettoTrasformato = JSON.parse ( this.responseText); 
+              console.log (oggettoTrasformato.content[0]);
+              oggettoTrasformato.content.forEach((item , index  )=> { 
+                  let comune =document.createTextNode( ` ${item.nome}`);
+                  let element2 =document.createElement("tr");
+                  element2.append (comune);
+                  document.getElementById("colonnaComune").appendChild(element2);
+
+                  let provincia =document.createTextNode( ` ${item.provincia.nome}`);
+                  let element3 =document.createElement("tr");
+                  element3.append (provincia);
+                  document.getElementById("colonnaProvincia").appendChild(element3);
+              });
+          }
+        }
+			}
+
+    </script>
+</body>
+</html>
