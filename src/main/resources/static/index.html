@@ -1,89 +1,126 @@
 <!DOCTYPE html>
 <html lang="it">
-	<head>
-		
-		<title> Index BeService </title>
 
-	</head>
-	
-	<body>
-		<h1>
-			Benvenuti nella pagina di BeSErvice <br>
-				
-			
-		</h1>
-		<h1>
-			<p>
-			Gestionale BeService<b>  <br>
-			<img src ="BeService.jpg " alt = "immagine non disponibile"/>
+<head>
 
-			</h1>
-		<h2> 
-			<form method = "post" action="/indexcontroller/loginform" >          
-                <fieldset>
-                    <legend>Login User </legend>
+    <title> Index BeService </title>
+
+</head>
+
+<body>
+    <h1>
+        Benvenuti nella pagina di BeSErvice <br>
+
+
+    </h1>
+    <h1>
+        <p>
+            Gestionale BeService<b> <br>
+                <img src="BeService.jpg " alt="immagine non disponibile" />
+
+    </h1>
+    <h2>
+        <form method="post" action="/indexcontroller/loginform">
+            <fieldset>
+                <legend>Login User </legend>
                 <label for="username">username</label>
-            <input name="username" th:field="*{username}">
-            
-     
-            <label for="password">password</label>
-            <input name="password" th:field="*{password}">
- 
-                </fieldset>
-                        
-                <button name = "invia" type = "submit" >Invia</button>
-                <button name = "annulla" type = "button" >Annulla </button>
-                
-            </form>
-            
-            <br>
-            <br>
-            <br>
-			
-			<form method = "post" action="/indexcontroller/signupform" >
-        
-                
-                <fieldset>
-            <legend>Signup User </legend>
-             <label for="username">username</label>
-            <input name="username" >
-            
-     
-            <label for="password">password</label>
-            <input name="password" >
- 
- 			 <label for="nome">nome</label>
-            <input name="nome" >
- 
- 			 <label for="cognome">cognome</label>
-            <input name="cognome" >
-            
-             <label for="email">email</label>
-            <input name="email">
-                </fieldset>
-                        
-                <button name = "invia" type = "submit" >Invia</button>
-                <button name = "annulla" type = "button" >Annulla </button>
-                
-            </form>
-            
-            
-			
-		</h2>
-		<button id="clicca"> clicca </button>
-		
-			<script type="text/javascript">
-	
-			document.getElementById("clicca").onclick = cambiaPagina;
+                <input name="username" th:field="*{username}">
 
-			function cambiaPagina (){
-            location.assign ("programmaJava.html");
+
+                <label for="password">password</label>
+                <input name="password" th:field="*{password}">
+
+            </fieldset>
+
+            <button name="invia" type="submit">Invia</button>
+            <button name="annulla" type="button">Annulla </button>
+
+        </form>
+
+        <br>
+        <br>
+        <br>
+
+        <form method="post" action="/indexcontroller/signupform">
+
+
+            <fieldset>
+                <legend>Signup User </legend>
+                <label for="username">username</label>
+                <input name="username">
+
+
+                <label for="password">password</label>
+                <input name="password">
+
+                <label for="nome">nome</label>
+                <input name="nome">
+
+                <label for="cognome">cognome</label>
+                <input name="cognome">
+
+                <label for="email">email</label>
+                <input name="email">
+            </fieldset>
+
+            <button name="invia" type="submit">Invia</button>
+            <button name="annulla" type="button">Annulla </button>
+
+        </form>
+        <br>
+
+
+        <fieldset>
+            <legend> Cerca Fattura </legend>
+            <label for="username">Numero Fattura</label>
+            <input type="number" id="numeroFattura">
+        </fieldset>
+        <button id="cercaFatturaButton"> Cerca</button>
+        <button name="annulla" type="button">Annulla </button>
+
+    </h2>
+    <button id="clicca"> clicca </button>
+
+    <script type="text/javascript">
+
+        document.getElementById("clicca").onclick = cambiaPagina;
+
+
+        function cambiaPagina() {
+            location.assign("programmaJava.html");
         }
-						
-			</script>
-				
-		
-	</body>
-	
+
+
+        let buttonCercaFattura = document.getElementById("cercaFatturaButton");
+        let inputNumeroFattura = document.getElementById("numeroFattura");
+        buttonCercaFattura.onclick = function (e) {
+            if (inputNumeroFattura.value === "") {
+                // questa funziona previene non fa inviare i dati della form se la condizione if è rispettata ( ossia manca la
+                // di un campo)
+                e.preventDefault();
+                alert(`non \è stato compilato un campo`);
+            } else {
+                sessionStorage.setItem ("numeroFattura" , inputNumeroFattura.value);
+                location.assign ("fattura.html")
+                // cercaFattura(inputNumeroFattura.value);
+            }
+        };
+
+        function cercaFattura(numeroFattura) {
+            let connettore = new XMLHttpRequest();
+            connettore.open("GET", "http://localhost:8080/controllerfattura/findbynumerofattura?numeroFattura=" + numeroFattura, true);
+            connettore.send();
+
+            connettore.onreadystatechange = function () {
+                if (connettore.readyState === 4 && connettore.status === 200) {
+                    let oggettoTrasformato = JSON.parse(this.responseText);
+                }
+            }
+
+        }
+    </script>
+
+
+</body>
+
 </html>
- 
