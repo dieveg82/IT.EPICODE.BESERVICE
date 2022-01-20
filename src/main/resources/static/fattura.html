@@ -281,7 +281,6 @@
         connettore.onreadystatechange = function () {
             if (connettore.readyState === 4 && connettore.status === 200) {
                 let oggettoTrasformato = JSON.parse(this.responseText);
-                let arraysss = new Array();
 
                 // console.log (oggettoTrasformato[0].cliente["ragioneSociale"]);
                 document.getElementById("nomeAzienda").innerHTML = oggettoTrasformato[0].cliente["ragioneSociale"]
