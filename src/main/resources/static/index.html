@@ -2,6 +2,7 @@
 <html lang="it">
 
 <head>
+    <script type="text/javascript" src="funzioniIndex.js"></script>
     <link rel="shortcut icon" href="">
     <title> Index BeService </title>
 
@@ -102,69 +103,21 @@
     <script type="text/javascript">
 
         // PRIMA FUNZIONE VEDI LISTA COMUNI
-        document.getElementById("clicca").onclick = cambiaPagina;
-
-        function cambiaPagina() {
-            location.assign("reportComuni.html");
-        }
+        document.getElementById("clicca").onclick = function () { cambiaPagina("reportComuni.html") }
 
         // SECONDA FUNZIONE CERCA PER ID CON VISUALIZZAZIONE FATTURA
-        let buttonCercaFattura = document.getElementById("cercaFatturaButton");
-        let inputNumeroFattura = document.getElementsByName("numeroFatturaFind");
-        buttonCercaFattura.onclick = function (e) {
-            if (inputNumeroFattura.value === "") {
-                // questa funziona previene non fa inviare i dati della form se la condizione if è rispettata ( ossia manca la
-                // di un campo)
-                e.preventDefault();
-                alert(`non e' stato compilato un campo`);
-            } else {
-                sessionStorage.setItem("numeroFattura", inputNumeroFattura.value);
-                location.assign("fattura.html")
-                // cercaFattura(inputNumeroFattura.value);
-            }
-        };
+        document.getElementById("cercaFatturaButton").onclick = function () {
+            let inputNumeroFattura = document.getElementById("numeroFatturaFind");
+            cercaFattura(event, inputNumeroFattura);
+        }
+
 
         // TERZA FUNZIONE INSERIMENTO FATTURA
-        let buttonInserisciFattura = document.getElementById("inserisciFattura");
-        let inputFattura = document.getElementsByName("inputFattura");
-       
-
-         
-        let cliente ="";
-        buttonInserisciFattura.onclick = function (e) {
-            if (inputFattura.value === "") {
-                e.preventDefault();
-                alert(`non e' stato compilato un campo`);
-            } else {
-                let connettore = new XMLHttpRequest();
-                let partitaIva = document.getElementById("partitaIva");
-
-                connettore.open("GET", "http://localhost:8080/controllercliente/findbypartitaiva?partitaIva=" + partitaIva.value, true);
-                connettore.send();
-                connettore.onreadystatechange = function () {
-                    if (connettore.readyState === 4 && connettore.status === 200) {
-                      cliente = JSON.parse (this.responseText);
-                        data = document.getElementById("dataFattura").value;
-                        data = data.slice(0,10);
-                                               
-                        let fattura = {
-                            data: data,
-                            numeroFattura: Number (document.getElementById("numeroFattura").value),
-                            anno: Number( document.getElementById("annoFattura").value),
-                            importo: Number (document.getElementById("importoFattura").value),
-                            stato : {
-                                id: 1,
-                                nome: "Da pagare"
-                            }
-                        }
-                        fattura.cliente = cliente;
-                        fattura = JSON.stringify(fattura);
-                        console.log (fattura);
-
-                    }
-                }
-            }
+        document.getElementById("inserisciFattura").onclick = function () {
+            let inputFattura = document.getElementsByName("inputFattura");
+            inserisciFattura(event, inputFattura);
         }
+
     </script>
 
 

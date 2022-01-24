@@ -9,8 +9,8 @@ import java.util.List;
 
 public class ImportCsvDb {
 
-	final String PATH = "C:\\Users\\dieve\\git\\IT.EPICODE.BESERVICE\\filecsv\\comuni-italiani.csv";
-	final String PATH2 = "C:\\Users\\dieve\\git\\IT.EPICODE.BESERVICE\\filecsv\\province-italiane.csv";
+	final String PATH = "C:\\Users\\Diego\\git\\IT.EPICODE.BESERVICE\\filecsv\\comuni-italiani.csv";
+	final String PATH2 = "C:\\Users\\Diego\\git\\IT.EPICODE.BESERVICE\\filecsv\\province-italiane.csv";
 	
 	public ImportCsvDb () {}
 	
